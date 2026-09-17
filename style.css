@@ -10,3 +10,9 @@
     display: block;
     margin-right: auto;
 }
+.divv{
+    display: flex; 
+    justify-content: center; 
+    gap: 200px
+
+}
