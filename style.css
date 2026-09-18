@@ -1,0 +1,238 @@
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box; 
+}
+
+
+
+.header{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+
+}
+
+.Basketball-img1 {
+    width: 678px;
+    height: 452px;
+    display: block;
+    object-fit: cover;
+    object-position: right;
+
+}
+
+.divv{
+    display: flex; 
+    justify-content: flex-start; 
+    padding: 70px;
+    gap: 30px;
+    align-items: flex-start;
+    
+
+
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-right: 25px;
+}
+
+.logo img{
+    height: 32px;
+}
+.navigationList{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+.navigationList a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: opacity 0.2s;
+}
+.navigationList a:hover {
+    opacity: 0.7;
+}
+
+.wrapper{
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%; 
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.95) 50%, transparent 100%);
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.text h3{
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 10px;
+
+
+}
+.text p{
+    font-size: 14px;
+    margin-bottom: 6px;
+
+}
+.text ul{
+    font-size: 13px;
+    margin-left: 10px;
+}
+.headlines{
+    width: 360px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px 24px;
+    box-shadow: 1px 1px 3px 1px rgb(0, 0, 0);
+
+}
+.headlinesLikeHead{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+    border-bottom: 1px solid;
+}
+.headlinesLikeHead h3{
+    font-size: 22px;
+    font-weight: 900;
+    color: black;
+
+}
+.headlines-list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.login{
+    width: 280px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px 24px;
+     box-shadow: 1px 1px 3px 1px rgb(0, 0, 0);
+    
+
+}
+.loginHeader{
+    font-size: 22px;
+    font-weight: 900;
+    color: black;
+}
+.inputGroup{
+    margin-bottom: 15px;
+
+}
+.inputGroup label {
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+  
+
+}
+.inputGroup input {
+    width: 100%;
+    padding: 9px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 13px;
+    outline: none;
+  
+  
+
+}
+footer{
+    background-color: rgb(0, 0, 0);
+    color:aliceblue;
+    padding: 20px;
+    margin-top: 20px;
+    
+    
+
+
+}
+.history{
+     width: 900px;
+    height: 600px;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    margin: left;
+
+}
+.hh{
+    text-align: center;
+    background-color: black;
+    color: #eb7404;
+}
+
+.historytext {
+    flex: 1;                
+    background-color: white;
+    border-radius: 8px;
+    padding: 25px 30px;
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.3);
+    
+}
+
+.historytext h2 {
+    font-size: 24px;
+    font-weight: 900;
+    color: #000;
+    margin-bottom: 20px;
+   
+    padding-bottom: 8px;
+}
+
+.historyp {
+    margin-bottom: 18px;
+}
+
+.historyp h3 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #024e90;
+    margin-bottom: 6px;
+}
+
+.historyp p {
+    font-size: 14px;
+     
+    color: #333;
+    margin-bottom: 8px;
+}
+
+
+.historylist {
+    list-style: none;
+    padding: 0;
+}
+
+.historylist li {
+    font-size: 13px;
+    padding: 6px ;
+    border-bottom: 1px solid #eee;
+    color: #444;
+
+}
