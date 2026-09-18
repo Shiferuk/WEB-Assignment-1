@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA Fan Club - Schedule</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="pictures/logo.png" alt="logo">
+            </a>
+        </div>
+
+        <nav>
+            <ul class="navigationList">
+                <li><a href="History.html">History</a></li>
+                <li><a href="shop.html">Merch</a></li>
+                <li><a href="teams.html">Teams</a></li>
+                <li><a href="ratings.html">Ratings</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <section class="table-section">
+            <h1>Расписание Предстоящих Матчей</h1>
+            <table id="schedule-table">
+    <thead>
+        <tr>
+            <th>Дата и Время</th>
+            <th>Хозяева (Команда 1)</th>
+            <th>Гости (Команда 2)</th>
+            <th>Статус</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>21.10 | 00:00</td>
+            <td>Пистонс</td>
+            <td>Селтикс</td>
+            <td>Предстоящий</td>
+        </tr>
+        <tr>
+            <td>21.10 | 04:00</td>
+            <td>Никс</td>
+            <td>Севенти Сиксерс</td>
+            <td>Предстоящий</td>
+        </tr>
+        <tr>
+            <td>21.10 | 06:30</td>
+            <td>Спёрс</td>
+            <td>Тандер</td>
+            <td>Предстоящий</td>
+        </tr>
+        <tr>
+            <td>22.10 | 04:00</td>
+            <td>Уизардс</td>
+            <td>Бакс</td>
+            <td>Предстоящий</td>
+        </tr>
+        <tr>
+            <td>22.10 | 04:00</td>
+            <td>Мэджик</td>
+            <td>Хокс</td>
+            <td>Предстоящий</td>
+        </tr>
+        <tr>
+            <td>22.10 | 04:30</td>
+            <td>Хит</td>
+            <td>Тимбервулвз</td>
+            <td>Предстоящий</td>
+        </tr>
+        <tr>
+            <td>22.10 | 04:30</td>
+            <td>Нетс</td>
+            <td>Хорнетс</td>
+            <td>Предстоящий</td>
+        </tr>
+        <tr>
+            <td>22.10 | 04:30</td>
+            <td>Рэпторс</td>
+            <td>Буллз</td>
+            <td>Предстоящий</td>
+        </tr>
+        <tr>
+            <td>22.10 | 05:00</td>
+            <td>Пеликанс</td>
+            <td>Пэйсерс</td>
+            <td>Предстоящий</td>
+        </tr>
+        <tr>
+            <td>22.10 | 05:00</td>
+            <td>Гриззлис</td>
+            <td>Юта</td>
+            <td>Предстоящий</td>
+        </tr>
+        <tr>
+            <td>22.10 | 05:30</td>
+            <td>Рокетс</td>
+            <td>Маверикс</td>
+            <td>Предстоящий</td>
+        </tr>
+        <tr>
+            <td>22.10 | 07:00</td>
+            <td>Лейкерс</td>
+            <td>Уорриорз</td>
+            <td>Предстоящий</td>
+        </tr>
+        <tr>
+            <td>22.10 | 07:00</td>
+            <td>Трэйл Блэйзерс</td>
+            <td>Финикс</td>
+            <td>Предстоящий</td>
+        </tr>
+        <tr>
+            <td>22.10 | 07:30</td>
+            <td>Клипперс</td>
+            <td>Сакраменто</td>
+            <td>Предстоящий</td>
+        </tr>
+    </tbody>
+</table>
+</section>
+        <section class="form-section">
+            <h2>Предзаказ Билетов и Уведомления</h2>
+            <form id="ticket-form">               
+                <div class="form-group">
+                    <label for="name">Ваше Имя:</label>
+                    <input type="text" id="name" name="name" placeholder="Введите имя" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Ваш Email:</label>
+                    <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="team">Любимая команда:</label>
+                    <select id="team" name="team">
+                        <option value="okc">OKC Thunder</option>
+                        <option value="wolves">Minnesota Timberwolves</option>
+                        <option value="nuggets">Denver Nuggets</option>
+                        <option value="lakers">LA Lakers</option>
+                        <option value="knicks">New York Knicks</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="color">Выберите цвет атрибутики:</label>
+                    <input type="color" id="color" name="color" value="#c9082a">
+                </div>
+                <div class="form-group">
+                    <label for="message">Дополнительные пожелания:</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Укажите сектор или количество мест..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Отправить заявку</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Проект выполнили: Yernur, Nurdaulet, Angsar</p>
+    </footer>
+</body>
+</html>
