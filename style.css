@@ -220,34 +220,6 @@ body {
     color: #000000;
     line-height: 1.6;
 }
-/*
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
-header {
-    border-bottom: 1px solid #e5e5e5;
-    padding: 15px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.logo {
-    display: flex;
-    align-items: center;
-    margin-right: 25px;
-}
-
-nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #000;
-    font-size: 14px;
-    font-weight: bold;
-    text-transform: uppercase;
-}*/
 
 .header-btn {
     background-color: #000;
@@ -570,12 +542,7 @@ ul {
 #ticket-form {
     display: block;
 }
-/*.container { 
-    width: 90%; 
-    max-width: 1100px; 
-    margin: 0 auto; 
-    padding: 20px; 
-}*/
+
 .players-grid { 
     display: flex; 
     flex-wrap: wrap; 
