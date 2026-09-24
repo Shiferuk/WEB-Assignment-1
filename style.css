@@ -18,7 +18,7 @@
     gap: 30px;
     align-items: flex-start;
 }
-.header{
+.header {
     background-color: black;
     display: flex;
     align-items: center;
@@ -151,13 +151,18 @@ footer{
     padding: 20px;
     margin-top: 20px;
 }
-.history{
-     width: 900px;
-    height: 600px;
-    display: block;
+
+.historyimages {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.history {
+    width: 100%;
+    height: 300px;
     object-fit: cover;
-    object-position: center;
-    margin: left;
+    border-radius: 8px;
 }
 .hh{
     text-align: center;
@@ -681,3 +686,84 @@ ul {
 .submit-btn:hover { 
     background-color: #a10620; 
 }
+
+.pagelayout {
+    min-height: 100vh;
+
+    display: grid;
+
+    grid-template-columns: 220px 1fr;
+
+    grid-template-rows: auto 1fr auto;
+
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+}
+
+.pagelayout .header {
+    grid-area: header;
+}
+
+.pagelayout .sidebar {
+    grid-area: sidebar;
+}
+
+.pagelayout .main-content {
+    grid-area: main;
+}
+
+.pagelayout footer {
+    grid-area: footer;
+}
+
+.sidebar {
+    background-color: #f2f2f2;
+    padding: 30px 20px;
+}
+
+.sidebar h3 {
+    margin-bottom: 20px;
+    color: #024e90;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    margin-bottom: 15px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #222;
+    font-weight: bold;
+}
+
+.sidebar a:hover {
+    color: #eb7404;
+}
+
+.maincontent {
+    padding: 40px;
+    min-width: 0;
+}
+
+.maincontent > h1 {
+    text-align: center;
+    color: #024e90;
+    margin-bottom: 30px;
+}
+
+.historygrid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 30px;
+
+    align-items: start;
+}
+
