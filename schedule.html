@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA Fan Club - Schedule</title>
+    <link rel="stylesheet" href="css/bababoi.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="pictures/logo.png" alt="logo">
+            </a>
+        </div>
+        <nav>
+            <ul class="navigationList">
+                <li><a href="History.html">History</a></li>
+                <li><a href="ratings.html">Rating</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="BrandPrice.html">Store</a></li>
+                <li><a href="Brands.html">Brands and Teams</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="table-section">
+            <h1>Schedule of Upcoming Matches</h1>
+            <table id="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Poster</th>
+                        <th>Date and Time</th>
+                        <th>Home Team</th>
+                        <th>Visiting Team</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="match-thumb-cell">
+                            <div class="table-thumb">
+                                <img src="images/bos vs pis.jpg" alt="Pistons vs Celtics">
+                                <div class="thumb-overlay">Match 1</div>
+                            </div>
+                        </td>
+                        <td>21.10 | 00:00</td>
+                        <td>Pistons</td>
+                        <td>Celtics</td>
+                        <td>Upcoming</td>
+                    </tr>
+                    <tr>
+                        <td class="match-thumb-cell">
+                            <div class="table-thumb">
+                                <img src="images/76ers-vs-knicks.jpg.jpeg" alt="Knicks vs 76ers">
+                                <div class="thumb-overlay">Match 2</div>
+                            </div>
+                        </td>
+                        <td>21.10 | 04:00</td>
+                        <td>Knicks</td>
+                        <td>76ers</td>
+                        <td>Upcoming</td>
+                    </tr>
+                    <tr>
+                        <td class="match-thumb-cell">
+                            <div class="table-thumb">
+                                <img src="images/spurs-vs-thunder.jpeg" alt="Spurs vs Thunder">
+                                <div class="thumb-overlay">Match 3</div>
+                            </div>
+                        </td>
+                        <td>21.10 | 06:30</td>
+                        <td>Spurs</td>
+                        <td>Thunder</td>
+                        <td>Upcoming</td>
+                    </tr>
+                    <tr>
+                        <td class="match-thumb-cell">
+                            <div class="table-thumb">
+                                <img src="images/wizards-vs-bucks.jpg" alt="Wizards vs Bucks">
+                                <div class="thumb-overlay">Match 4</div>
+                            </div>
+                        </td>
+                        <td>22.10 | 04:00</td>
+                        <td>Wizards</td>
+                        <td>Bucks</td>
+                        <td>Upcoming</td>
+                    </tr>
+                    <tr>
+                        <td class="match-thumb-cell">
+                            <div class="table-thumb">
+                                <img src="images/Orlando-Magic-vs-Atlanta-Hawks.jpg" alt="Magic vs Hawks">
+                                <div class="thumb-overlay">Match 5</div>
+                            </div>
+                        </td>
+                        <td>22.10 | 04:00</td>
+                        <td>Magic</td>
+                        <td>Hawks</td>
+                        <td>Upcoming</td>
+                    </tr>
+                    <tr>
+                        <td class="match-thumb-cell">
+                            <div class="table-thumb">
+                                <img src="images/heat-vs-timberwolws.jpg" alt="Heat vs Timberwolves">
+                                <div class="thumb-overlay">Match 6</div>
+                            </div>
+                        </td>
+                        <td>22.10 | 04:30</td>
+                        <td>Heat</td>
+                        <td>Timberwolves</td>
+                        <td>Upcoming</td>
+                    </tr>
+                    <tr>
+                        <td class="match-thumb-cell">
+                            <div class="table-thumb">
+                                <img src="images/nets-vs-hornets.jpg" alt="Nets vs Hornets">
+                                <div class="thumb-overlay">Match 7</div>
+                            </div>
+                        </td>
+                        <td>22.10 | 04:30</td>
+                        <td>Nets</td>
+                        <td>Hornets</td>
+                        <td>Upcoming</td>
+                    </tr>
+                    <tr>
+                        <td class="match-thumb-cell">
+                            <div class="table-thumb">
+                                <img src="images/raptors-vs-bulls.jpg" alt="Raptors vs Bulls">
+                                <div class="thumb-overlay">Match 8</div>
+                            </div>
+                        </td>
+                        <td>22.10 | 04:30</td>
+                        <td>Raptors</td>
+                        <td>Bulls</td>
+                        <td>Upcoming</td>
+                    </tr>
+                    <tr>
+                        <td class="match-thumb-cell">
+                            <div class="table-thumb">
+                                <img src="images/pelicans-vs-pacers.jpg" alt="Pelicans vs Pacers">
+                                <div class="thumb-overlay">Match 9</div>
+                            </div>
+                        </td>
+                        <td>22.10 | 05:00</td>
+                        <td>Pelicans</td>
+                        <td>Pacers</td>
+                        <td>Upcoming</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="form-section">
+            <h2>Ticket Pre-order & Notifications</h2>
+            <form id="ticket-form"> 
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="team">Favorite team:</label>
+                    <select id="team" name="team">
+                        <option value="okc">OKC Thunder</option>
+                        <option value="wolves">Minnesota Timberwolves</option>
+                        <option value="nuggets">Denver Nuggets</option>
+                        <option value="lakers">LA Lakers</option>
+                        <option value="knicks">New York Knicks</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="color">Choose gear color:</label>
+                    <input type="color" id="color" name="color" value="#c9082a">
+                </div>
+                <div class="form-group">
+                    <label for="message">Additional notes:</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Specify section or number of seats..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Submit Request</button>
+            </form>
+        </section>
+
+        <section class="gallery-section">
+            <h2>Match highlights Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/tatum-1.jpg" alt="Pistons vs Celtics">
+                    <div class="overlay">Pistons vs Celtics</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/76ers.jpg" alt="Knicks vs 76ers">
+                    <div class="overlay">Knicks vs 76ers</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/spurs.jpg" alt="Spurs vs Thunder">
+                    <div class="overlay">Spurs vs Thunder</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/wizards.jpg" alt="Wizards vs Bucks">
+                    <div class="overlay">Wizards vs Bucks</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/orlando.jpg" alt="Magic vs Hawks">
+                    <div class="overlay">Magic vs Hawks</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/heat.jpg" alt="Heat vs Timberwolves">
+                    <div class="overlay">Heat vs Timberwolves</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/nets.jpg" alt="Nets vs Hornets">
+                    <div class="overlay">Nets vs Hornets</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/raptors.jpg" alt="Raptors vs Bulls">
+                    <div class="overlay">Raptors vs Bulls</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/pelicans.jpg" alt="Pelicans vs Pacers">
+                    <div class="overlay">Pelicans vs Pacers</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <p class="footer-title">Assignment 1 — HTML & CSS Basics</p>
+            <div class="team-members">
+                <p><strong>Team Members:</strong></p>
+                <ul>
+                    <li>Abdulla Nurdaulet</li>
+                    <li>Angsar Baibossinov</li>
+                    <li>Yernur Inkarbek</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
