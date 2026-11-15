@@ -1,0 +1,845 @@
+:root {
+    --nba-blue: #024e90;
+    --nba-orange: #eb7404;
+    --nba-orange-text: #b85600;
+    --nba-light: #f4f6f8;
+    --nba-text: #17212b;
+    --nba-muted: #5a6570;
+    --nba-card: #ffffff;
+    --nba-border: rgba(7, 21, 34, 0.12);
+    --nba-shadow: 0 8px 24px rgba(7, 21, 34, 0.08);
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--nba-light);
+    color: var(--nba-text);
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+img {
+    max-width: 100%;
+}
+
+section {
+    scroll-margin-top: 90px;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    overflow-wrap: break-word;
+}
+
+.eyebrow {
+    color: var(--nba-orange-text);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+/* nav */
+
+.site-navbar {
+    background: #050505;
+    border-bottom: 3px solid var(--nba-orange);
+}
+
+.site-navbar .navbar-brand span {
+    font-size: 0.85rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.site-navbar .nav-link {
+    color: #ffffff !important;
+    font-size: 0.82rem;
+    font-weight: 700;
+    transition: color 0.2s ease;
+}
+
+.site-navbar .nav-link:hover,
+.site-navbar .nav-link.active {
+    color: var(--nba-orange) !important;
+}
+
+.site-navbar .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.35);
+}
+
+.site-navbar .navbar-toggler-icon {
+    filter: invert(1);
+}
+
+/* btn */
+
+.btn-primary {
+    --bs-btn-bg: var(--nba-orange);
+    --bs-btn-border-color: var(--nba-orange);
+    --bs-btn-hover-bg: #c85f00;
+    --bs-btn-hover-border-color: #c85f00;
+    --bs-btn-active-bg: #a94f00;
+    --bs-btn-active-border-color: #a94f00;
+}
+
+.btn-outline-primary {
+    --bs-btn-color: var(--nba-blue);
+    --bs-btn-border-color: var(--nba-blue);
+    --bs-btn-hover-bg: var(--nba-blue);
+    --bs-btn-hover-border-color: var(--nba-blue);
+}
+
+.btn-secondary {
+    --bs-btn-bg: var(--nba-blue);
+    --bs-btn-border-color: var(--nba-blue);
+    --bs-btn-hover-bg: #013b6e;
+    --bs-btn-hover-border-color: #013b6e;
+}
+
+button,
+.btn {
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* hover lift only for devices with a mouse */
+
+@media (hover: hover) {
+
+    button:hover:not(:disabled),
+    .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+    }
+
+}
+
+button:active:not(:disabled),
+.btn:active {
+    transform: translateY(0) scale(0.97);
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/*
+   4. CARDS*/
+
+.card {
+    color: var(--nba-text);
+    background-color: var(--nba-card);
+    border: 1px solid var(--nba-border);
+    border-radius: 12px;
+    box-shadow: var(--nba-shadow);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background-color 0.3s ease;
+}
+
+@media (hover: hover) {
+
+    .card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 28px rgba(7, 21, 34, 0.14);
+    }
+
+}
+
+.card-title {
+    font-weight: 800;
+}
+
+.card-text {
+    color: var(--nba-muted);
+}
+
+.history-carousel-img {
+    width: 100%;
+    height: clamp(260px, 45vw, 560px);
+    object-fit: cover;
+}
+
+/* player section, light mode */
+
+.player-section {
+    background-color: var(--nba-card);
+    color: var(--nba-text);
+    border: 1px solid var(--nba-border);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* card */
+
+#playerCard,
+.player-card {
+    overflow: hidden;
+    background-color: var(--nba-light);
+    color: var(--nba-text);
+    border-top: 4px solid var(--nba-orange);
+    overflow-wrap: break-word;
+}
+
+.player-animate {
+    animation: fadeInUp 0.5s ease both;
+}
+
+#playerName {
+    font-weight: 900;
+    letter-spacing: 0.3px;
+}
+
+#playerTeam,
+#playerPosition,
+#playerPoints {
+    margin-bottom: 0.5rem;
+}
+
+#playerMessage {
+    color: var(--nba-muted);
+    font-style: italic;
+}
+
+/* roster uses Bootstrap columns */
+
+.roster-card {
+    padding: 1rem;
+    background: var(--nba-light);
+    color: var(--nba-text);
+    border: 1px solid var(--nba-border);
+    border-left: 4px solid var(--nba-orange);
+    border-radius: 10px;
+    box-shadow: var(--nba-shadow);
+    animation: fadeInUp 0.5s ease both;
+    transition: transform 0.2s ease;
+}
+
+@media (hover: hover) {
+
+    .roster-card:hover {
+        transform: translateY(-5px);
+    }
+
+}
+
+.roster-card h4 {
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+
+/* PASSWORD SHOW / HIDE BUTTON */
+
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper .form-control,
+.password-wrapper .form-control.is-invalid,
+.password-wrapper .form-control.is-valid {
+    padding-right: 48px;
+    background-image: none;
+}
+
+.password-toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: none;
+    border-radius: 0 0.375rem 0.375rem 0;
+    background: transparent;
+    color: #6c757d;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.password-toggle:hover:not(:disabled),
+.password-toggle:focus-visible {
+    color: var(--nba-orange);
+    transform: none;
+    box-shadow: none;
+}
+
+.password-toggle:active:not(:disabled) {
+    transform: none;
+}
+
+/* HEADLINES AND LOGIN CARDS */
+
+.headlines,
+.login {
+    height: 100%;
+    padding: 20px 24px;
+    border: 1px solid var(--nba-border);
+    border-radius: 8px;
+    background: var(--nba-card);
+    color: var(--nba-text);
+    box-shadow: var(--nba-shadow);
+}
+
+.headlinesLikeHead,
+.loginHeader {
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+    border-bottom: 2px solid var(--nba-orange);
+}
+
+.headlinesLikeHead h3,
+.loginHeader h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 900;
+}
+
+.headlines-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.headlines-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--nba-border);
+    font-size: 0.9rem;
+}
+
+.headlines-list li:last-child {
+    border-bottom: none;
+}
+
+.error-message {
+    min-height: 20px;
+    margin-top: 4px;
+    font-size: 0.85rem;
+    color: #dc3545;
+}
+
+#formMessage {
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+/* day night */
+
+body.night-mode {
+    --nba-light: #101820;
+    --nba-text: #f1f5f9;
+    --nba-muted: #c0cad4;
+    --nba-card: #1b2935;
+    --nba-border: rgba(255, 255, 255, 0.12);
+    --nba-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    --nba-orange-text: #ff9a3c;
+
+    background-color: var(--nba-light);
+    color: var(--nba-text);
+}
+
+body.night-mode .card {
+    background-color: var(--nba-card);
+    color: var(--nba-text);
+    border-color: var(--nba-border);
+}
+
+/* night mode for player section and roster */
+
+body.night-mode .player-section {
+    background-color: var(--nba-card);
+    color: var(--nba-text);
+    border-color: var(--nba-border);
+}
+
+body.night-mode #playerCard,
+body.night-mode .player-card,
+body.night-mode .roster-card {
+    background-color: var(--nba-light);
+    color: var(--nba-text);
+    border-color: var(--nba-border);
+}
+
+body.night-mode .card-text,
+body.night-mode #playerMessage {
+    color: var(--nba-muted);
+}
+
+/* readable secondary text in night mode */
+
+body.night-mode .text-secondary,
+body.night-mode .text-muted,
+body.night-mode .form-text {
+    color: var(--nba-muted) !important;
+}
+
+/* night mode for index blocks */
+
+body.night-mode .headlines,
+body.night-mode .login {
+    background-color: var(--nba-card);
+    color: var(--nba-text);
+}
+
+body.night-mode .headlinesLikeHead h3,
+body.night-mode .loginHeader h3 {
+    color: var(--nba-text);
+}
+
+body.night-mode .error-message {
+    color: #ff8a95;
+}
+
+body.night-mode .login a {
+    color: #8ec5ff;
+}
+
+/* contrast of buttons in night mode */
+
+body.night-mode #themeToggle {
+    color: #101820;
+    background-color: #f1f5f9;
+    border-color: #f1f5f9;
+}
+
+body.night-mode .btn-outline-primary {
+    --bs-btn-color: #8ec5ff;
+    --bs-btn-border-color: #8ec5ff;
+    --bs-btn-hover-color: #101820;
+    --bs-btn-hover-bg: #8ec5ff;
+    --bs-btn-hover-border-color: #8ec5ff;
+}
+
+body.night-mode .password-toggle {
+    color: #c0cad4;
+}
+
+body.night-mode .password-toggle:hover:not(:disabled),
+body.night-mode .password-toggle:focus-visible {
+    color: var(--nba-orange);
+}
+
+body.night-mode .form-control,
+body.night-mode .form-select {
+    color: var(--nba-text);
+    background-color: #17232e;
+    border-color: #455462;
+}
+
+body.night-mode .form-control::placeholder {
+    color: #aab6c2;
+}
+
+/* animation */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* footer */
+
+.site-footer {
+    background: #050505;
+    color: #ffffff;
+    border-top: 3px solid var(--nba-orange);
+}
+
+.site-footer .footer-title {
+    font-size: 1rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.site-footer .footer-note {
+    color: #b3bcc5;
+    font-size: 0.78rem;
+}
+
+.site-footer .member {
+    display: inline-block;
+    padding: 0.35rem 0.65rem;
+    color: #e6e6e6;
+    background: #202020;
+    border-radius: 5px;
+    font-size: 0.7rem;
+}
+
+/* profile and login/sign up cards */
+
+body .profile-card,
+body .auth-card {
+    overflow-wrap: break-word;
+}
+
+.profile-info p {
+    overflow-wrap: anywhere;
+}
+
+/* HOME HEADING*/
+
+.home-heading {
+    margin: 0;
+    padding: 12px 16px;
+    background-color: #f5f5f5;
+    color: #024e90;
+}
+
+body.night-mode .home-heading {
+    background-color: #1b2935;
+    color: #93c5fd;
+}
+
+/* Toast Notification */
+
+#toast {
+    display: none;
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    background-color: #212529;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    z-index: 10000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+}
+
+/* Search field */
+
+#playerSearch {
+    max-width: 500px;
+}
+
+/*  10. ACCESSIBILITY */
+
+:focus-visible {
+    outline: 3px solid var(--nba-orange);
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* 11. RESPONSIVE DESIGN*/
+
+/* laptop and tablet, blocks go to the next line instead of overflowing */
+
+@media (max-width: 1549.98px) {
+
+    .divv {
+        flex-wrap: wrap;
+        padding: 40px 30px;
+        gap: 25px;
+    }
+
+    .wrapper {
+        flex: 0 1 678px;
+        max-width: 100%;
+    }
+
+    .Basketball-img1 {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .headlines,
+    .login {
+        flex: 1 1 300px;
+        width: auto;
+        min-width: 0;
+    }
+}
+
+/* tablet */
+
+@media (max-width: 991.98px) {
+
+    .divv {
+        padding: 30px 20px;
+    }
+
+    .wrapper {
+        flex: 1 1 100%;
+    }
+
+    .site-navbar .nav-link {
+        padding: 0.6rem 0;
+    }
+}
+
+/* mobile */
+
+@media (max-width: 767.98px) {
+
+    .divv {
+        padding: 20px 12px;
+        gap: 20px;
+    }
+
+    .wrapper {
+        display: block;
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    .Basketball-img1 {
+        height: 260px;
+        object-position: center;
+    }
+
+    /* text goes under the picture so it does not cover it */
+
+    .text {
+        position: static;
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        background: #000000;
+    }
+
+    .headlines,
+    .login {
+        flex: 1 1 100%;
+        padding: 18px 16px;
+    }
+
+    .home-heading {
+        font-size: 1.6rem;
+    }
+
+    /* history page */
+
+    .btn-group {
+        display: flex;
+        width: 100%;
+    }
+
+    .btn-group .btn {
+        flex: 1;
+    }
+
+    .player-section {
+        padding: 1.25rem !important;
+    }
+
+    #randomPlayerBtn {
+        width: 100%;
+    }
+
+    /* toast on phones */
+
+    #toast {
+        top: 15px;
+        right: 15px;
+        left: 15px;
+        max-width: none;
+    }
+
+    /* profile and sign up pages only */
+
+    body .profile-container {
+        margin: 20px auto;
+        padding: 12px;
+    }
+
+    body .profile-card {
+        padding: 22px 16px;
+    }
+
+    body .auth-section {
+        min-height: auto;
+        padding: 20px 12px;
+    }
+
+    body .auth-card {
+        padding: 24px 16px;
+    }
+
+    .site-footer {
+        text-align: center;
+    }
+
+    .site-footer .d-flex {
+        justify-content: center !important;
+    }
+}
+
+/* small phones */
+
+@media (max-width: 575.98px) {
+
+    .site-navbar .navbar-brand span {
+        font-size: 0.72rem;
+    }
+
+    .history-carousel-img {
+        height: 260px;
+    }
+
+    .display-5 {
+        font-size: 1.8rem;
+    }
+
+    .lead {
+        font-size: 1rem;
+    }
+
+    #playerSearch {
+        max-width: 100%;
+    }
+
+    .home-heading {
+        font-size: 1.4rem;
+    }
+}
+/* Sign up */
+.auth-section {
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 15px;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 480px;
+    padding: 35px;
+    border-radius: 18px;
+    background: var(--nba-card);
+    color: var(--nba-text);
+    border: 1px solid var(--nba-border);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.auth-card h1 {
+    font-weight: 800;
+}
+
+.auth-card .form-control {
+    padding: 12px;
+}
+
+.auth-card .btn-primary {
+    padding: 12px;
+    font-weight: 600;
+}
+
+.auth-description {
+    color: var(--nba-muted);
+}
+
+.auth-error {
+    min-height: 20px;
+    display: block;
+    font-size: 0.85rem;
+}
+
+body.night-mode .auth-error {
+    color: #ff8a95 !important;
+}
+
+body.night-mode .auth-card a {
+    color: #8ec5ff;
+}
+/* Profile */
+.profile-container {
+    max-width: 850px;
+    margin: 45px auto  35px;
+    padding: 20px;
+}
+
+.profile-card {
+    padding: 35px;
+    border-radius: 15px;
+    background: var(--nba-card);
+    color: var(--nba-text);
+    border: 1px solid var(--nba-border);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.12);
+}
+
+.profile-avatar {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: #b85600;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.profile-info {
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 8px;
+    background: rgba(128, 128, 128, 0.1);
+}
+
+.profile-info p {
+    margin-bottom: 5px;
+}
+
+#profileMessage {
+    margin-top: 15px;
+}
+
+body.night-mode .profile-card a:not(.btn) {
+    color: #8ec5ff;
+}
+/* Keep footer at the bottom */
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-container {
+    flex: 1;
+}
+
+.site-footer {
+    margin-top: auto;
+}
