@@ -334,3 +334,57 @@ footer{
   border-radius: 4px;
   font-size: 14px;
 }
+
+
+.error-message {
+    color: #dc3545;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.form-control.is-invalid {
+    border-color: #dc3545;
+}
+
+.form-control.is-valid {
+    border-color: #198754;
+}
+
+#formMessage {
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+/* Basketball bounce animation */
+
+.basketball-ball {
+    display: inline-block;
+    font-size: 70px;
+    transform: translateY(0);
+}
+
+.basketball-ball.bouncing {
+    animation: ballBounce 0.8s ease-in-out;
+}
+
+@keyframes ballBounce {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    35% {
+        transform: translateY(-100px) rotate(180deg);
+    }
+
+    60% {
+        transform: translateY(0) rotate(360deg);
+    }
+
+    80% {
+        transform: translateY(-30px) rotate(450deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(540deg);
+    }
+}
