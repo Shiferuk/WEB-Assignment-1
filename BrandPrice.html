@@ -1,163 +1,158 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brand and Price Information</title>
-    <link rel="stylesheet" href="nigga.css">
+    <title>Store | Basketball-NBA</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="themeNur/site-theme.css">
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script src="script.js"></script>
+
 </head>
 <body>
-    <header class="header_class">
-        <div class="logo_class">
-            <a href="index.html">
-                <img src="pictures/logo.png" alt="logo">
-            </a>
-        </div>
-        <nav>
-            <ul class="navigationList_class">
-                <li><a href="History.html">History</a></li>
-                <li><a href="ratings.html">Rating</a></li>
-                <li><a href="schedule.html">Schedule</a></li>
-                <li><a href="BrandPrice.html">Store</a></li>
-                <li><a href="Brands.html">Brands and Teams</a></li>
+
+<nav class="navbar navbar-expand-lg navbar-dark site-navbar">
+    <div class="container-fluid px-3 px-sm-2 px-lg-4">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+            <img src="pictures/logo.png" alt="Basketball-NBA logo" height="34">
+            <span>BASKETBALL-NBA</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNavigation" aria-controls="siteNavigation" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="siteNavigation">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="History.html">History</a></li>
+                <li class="nav-item"><a class="nav-link" href="ratings.html">Rating</a></li>
+                <li class="nav-item"><a class="nav-link" href="schedule.html">Schedule</a></li>
+                <li class="nav-item"><a class="nav-link" href="Brands.html">Teams</a></li>
+                <li class="nav-item"><a class="nav-link active" href="BrandPrice.html">Store</a></li>
             </ul>
-            <a></a>
-        </nav>
-    </header>
-
-    <h1 style ="text-align: center; background-color: rgb(245, 245, 245); color: rgb(2, 78, 144);">A style born on the asphalt. Comfort on the hardwood.</h1>
-    <div class="container">
-        <h1 class="page-title">Basketball Gear</h1>
-        <div class="filters">
-            <button class="filter-btn">Category ▾</button>
-            <button class="filter-btn">Brand ▾</button>
-            <button class="filter-btn">Price ▾</button>
-            <button class="filter-btn">Color ▾</button>
-            
-            <select class="filter-btn sort-box">
-                <option>Price Low to High</option>
-                <option>Price High to Low</option>
-            </select>
-        </div>
-        <div class="products-grid">
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="imageBrands\Shoes\all pro nitro.png" alt="All pro Nitro">
-                </div>
-                <div>
-                    <div class="product-category">Puma • Shoes</div>
-                    <div class="product-title">All-Pro NITRO 2 Elite</div>
-                </div>
-                <div class="product-price">$205.00</div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="imageBrands\Shoes\Lebronxxi.png" alt="Nike LeBron XXI">
-                </div>
-                <div>
-                    <div class="product-category">Nike • Shoes</div>
-                    <div class="product-title">LeBron XXI</div>
-                </div>
-                <div class="product-price">$200.00</div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="imageBrands\Shoes\AirJordan.png" alt="Air Jordan 1 High">
-                </div>
-                <div>
-                    <div class="product-category">Nike • Shoes</div>
-                    <div class="product-title">Air Jordan 1 High OG</div>
-                </div>
-                <div class="product-price">$200.00</div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="imageBrands\Balls\WilsonEvolution.png" alt="Wilson Evolution">
-                </div>
-                <div>
-                    <div class="product-category">Wilson • Equipment</div>
-                    <div class="product-title">NBA Game Ball</div>
-                </div>
-                <div class="product-price">$170.00</div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="imageBrands\Clothing\LakersHoodie.png" alt="Lakers Tech Fleece Hoodie">
-                </div>
-                <div>
-                    <div class="product-category">Nike • Clothing</div>
-                    <div class="product-title">Lakers Tech Fleece Hoodie</div>
-                </div>
-                <div class="product-price">$170.00</div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="imageBrands\Clothing\MitchellNess.png" alt="Mitchell & Ness">
-                </div>
-                <div>
-                    <div class="product-category">Jordan • Clothing</div>
-                    <div class="product-title">Statement Edition</div>
-                </div>
-                <div class="product-price">$120.00</div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="imageBrands\Clothing\AntonyEdwards.png" alt="Antony Edwards">
-                </div>
-                <div>
-                    <div class="product-category">Adidas • Clothing</div>
-                    <div class="product-title">Shorts Pro Basketball</div>
-                </div>
-                <div class="product-price">$65.00</div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="imageBrands\Rockets\currySplashBackpack.png" alt="Curry Splash Backpack">
-                </div>
-                <div>
-                    <div class="product-category">Under Armour • Accessories</div>
-                    <div class="product-title">Backpack Curry</div>
-                </div>
-                <div class="product-price">$85.00</div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="imageBrands\Shoes\Curry11Team.png" alt="Under Armour Curry Flow 11">
-                </div>
-                <div>
-                    <div class="product-category">Under Armour • Footwear</div>
-                    <div class="product-title">Under Armour Curry Flow 11</div>
-                </div>
-                <div class="product-price">$65.00</div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="imageBrands\Clothing\WarriorsShorts.png" alt="Warriors Practice Shorts">
-                </div>
-                <div>
-                    <div class="product-category">Nike • Clothing</div>
-                    <div class="product-title">Warriors Practice Shorts</div>
-                </div>
-                <div class="product-price">$85.00</div>
-            </div>
-
         </div>
     </div>
-    <footer class="site-footer">
-        <div class="footer-container">
-            <p class="footer-title">Assignment 1 — HTML & CSS Basics</p>
-      
-            <div class="team-members">
-                <p><strong>Team Members:</strong></p>
-                <ul>
-                    <li>Abdulla Nurdaulet</li>
-                    <li>Angsar Baibossinov</li>
-                    <li>Yernur Inkarbek</li>
-                </ul>
+</nav>
+
+<div class="legacy-container">
+    <div class="page-top-bar">
+        <h1 class="page-title">Basketball Gear</h1>
+        <button id="themeToggle" class="btn btn-dark theme-toggle" type="button" aria-pressed="false">🌙 Night Mode</button>
+    </div>
+
+    <button type="button" id="openAlertPopup" class="btn btn-primary mb-3">Get price alerts</button>
+    <div class="store-search" id="storeSearchWrap">
+        <label for="storeSearch" class="visually-hidden">Search products</label>
+        <input type="search" id="storeSearch" class="form-control" placeholder="Search gear by name, brand or category" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="suggestList">
+        <ul class="suggest-list" id="suggestList" role="listbox"></ul>
+    </div>
+
+    <div class="filters" id="categoryFilters">
+        <button type="button" class="btn btn-outline-primary btn-sm filter-button active" data-category="all">All</button>
+        <button type="button" class="btn btn-outline-primary btn-sm filter-button" data-category="shoes">Shoes</button>
+        <button type="button" class="btn btn-outline-primary btn-sm filter-button" data-category="clothing">Clothing</button>
+        <button type="button" class="btn btn-outline-primary btn-sm filter-button" data-category="equipment">Equipment</button>
+        <button type="button" class="btn btn-outline-primary btn-sm filter-button" data-category="accessories">Accessories</button>
+        <select class="form-select form-select-sm w-auto" id="sortSelect">
+            <option value="low">Price Low to High</option>
+            <option value="high">Price High to Low</option>
+        </select>
+    </div>
+    <p class="product-count" id="productCount"></p>
+    <p class="no-results" id="noResults">No products match your search.</p>
+    <div class="products-grid" id="productsGrid"></div>
+</div>
+
+<div class="alert-popup" id="alertPopup">
+    <div class="alert-popup-box">
+        <button type="button" class="alert-popup-close" id="closeAlertPopup" aria-label="Close">&times;</button>
+        <h3>Get price alerts</h3>
+        <p>Enter your email and we will tell you about discounts on shoes, jerseys and basketballs.</p>
+        <form id="alertForm" novalidate>
+            <label class="form-label" for="alertEmail">Email</label>
+            <input class="form-control" type="text" inputmode="email" id="alertEmail" placeholder="name@example.com">
+            <div class="invalid-feedback"></div>
+            <button type="submit" class="btn btn-primary w-100 mt-3" id="subscribeBtn">Subscribe</button>
+        </form>
+    </div>
+</div>
+
+<!-- Product quick view modal -->
+<div id="productModal" class="product-modal-overlay" style="display: none;">
+    <div class="product-modal-content">
+        <button type="button" class="close-modal" aria-label="Close">×</button>
+
+        <div class="modal-grid">
+            <!-- Левая часть: картинка -->
+            <div class="modal-gallery">
+                <img id="modalMainImg" src="" alt="Product" class="main-preview-img">
+            </div>
+
+            <!-- Правая часть: информация -->
+            <div class="modal-info">
+                <div id="modalBrand" class="modal-brand"></div>
+                <h2 id="modalTitle" class="modal-title"></h2>
+                <div id="modalPrice" class="modal-price"></div>
+
+                <!-- Краткое описание -->
+                <p id="modalDesc" class="modal-desc"></p>
+
+                <!-- Секция Description -->
+                <div class="modal-section">
+                    <div class="modal-section-header">
+                        <h3>Description</h3>
+                        <span class="accordion-icon">—</span>
+                    </div>
+                    <div class="modal-accordion-content">
+                        <ul id="modalFeatures" class="modal-features"></ul>
+                    </div>
+                </div>
+
+                <!-- Секция Additional information -->
+                <div class="modal-section">
+                    <div class="modal-section-header">
+                        <h3>Additional information</h3>
+                        <span class="accordion-icon">—</span>
+                    </div>
+                    <div class="modal-accordion-content">
+                        <table class="modal-info-table">
+                            <tbody id="modalInfoTable"></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Кнопка покупки -->
+                <a id="modalBuyBtn" href="#" target="_blank" rel="noopener noreferrer" class="modal-buy-btn">
+                    Buy now
+                </a>
             </div>
         </div>
-    </footer>
-</body>
+    </div>
+</div>
+
+<footer class="site-footer mt-lg-5">
+    <div class="container py-4 px-sm-2 px-lg-4">
+        <div class="row gy-3 align-items-center">
+            <div class="col-lg-6">
+                <p class="footer-title mb-1">BASKETBALL-NBA</p>
+                <p class="footer-note mb-0">Players, teams, history, schedules and the game we love.</p>
+            </div>
+            <div class="col-lg-6">
+                <div class="d-flex flex-wrap justify-content-lg-end gap-2">
+                    <span class="member rounded px-2 py-1">Abdulla Nurdaulet</span>
+                    <span class="member rounded px-2 py-1">Angsar Baibossinov</span>
+                    <span class="member rounded px-2 py-1">Yernur Inkarbek</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/store-popup.js"></script>
+<script src="js/store-products.js"></script>
+
+<script src="js/store-modal.js"></script>
+
 </body>
 </html>
