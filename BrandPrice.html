@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store | Basketball-NBA</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/site-theme.css">
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script src="js/script.js"></script>
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark site-navbar">
+    <div class="container-fluid px-3 px-sm-2 px-lg-4">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+            <img src="pictures/logo.png" alt="Basketball-NBA logo" height="34">
+            <span>BASKETBALL-NBA</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNavigation" aria-controls="siteNavigation" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="siteNavigation">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="History.html">History</a></li>
+                <li class="nav-item"><a class="nav-link" href="ratings.html">Rating</a></li>
+                <li class="nav-item"><a class="nav-link" href="schedule.html">Schedule</a></li>
+                <li class="nav-item"><a class="nav-link" href="Brands.html">Teams</a></li>
+                <li class="nav-item"><a class="nav-link active" href="BrandPrice.html">Store</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="legacy-container">
+    <div class="page-top-bar">
+        <h1 class="page-title">Basketball Gear</h1>
+        <button id="themeToggle" class="btn btn-dark theme-toggle" type="button" aria-pressed="false">🌙 Night Mode</button>
+    </div>
+
+    <button type="button" id="openAlertPopup" class="btn btn-primary mb-3">Get price alerts</button>
+    <div class="store-search" id="storeSearchWrap">
+        <label for="storeSearch" class="visually-hidden">Search products</label>
+        <input type="search" id="storeSearch" class="form-control" placeholder="Search gear by name, brand or category" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="suggestList">
+        <ul class="suggest-list" id="suggestList" role="listbox"></ul>
+    </div>
+
+    <div class="filters" id="categoryFilters">
+        <button type="button" class="btn btn-outline-primary btn-sm filter-button active" data-category="all">All</button>
+        <button type="button" class="btn btn-outline-primary btn-sm filter-button" data-category="shoes">Shoes</button>
+        <button type="button" class="btn btn-outline-primary btn-sm filter-button" data-category="clothing">Clothing</button>
+        <button type="button" class="btn btn-outline-primary btn-sm filter-button" data-category="equipment">Equipment</button>
+        <button type="button" class="btn btn-outline-primary btn-sm filter-button" data-category="accessories">Accessories</button>
+        <select class="form-select form-select-sm w-auto" id="sortSelect">
+            <option value="low">Price Low to High</option>
+            <option value="high">Price High to Low</option>
+        </select>
+    </div>
+    <p class="product-count" id="productCount"></p>
+    <p class="no-results" id="noResults">No products match your search.</p>
+    <div class="products-grid" id="productsGrid"></div>
+</div>
+
+<div class="alert-popup" id="alertPopup">
+    <div class="alert-popup-box">
+        <button type="button" class="alert-popup-close" id="closeAlertPopup" aria-label="Close">&times;</button>
+        <h3>Get price alerts</h3>
+        <p>Enter your email and we will tell you about discounts on shoes, jerseys and basketballs.</p>
+        <form id="alertForm" novalidate>
+            <label class="form-label" for="alertEmail">Email</label>
+            <input class="form-control" type="text" inputmode="email" id="alertEmail" placeholder="name@example.com">
+            <div class="invalid-feedback"></div>
+            <button type="submit" class="btn btn-primary w-100 mt-3" id="subscribeBtn">Subscribe</button>
+        </form>
+    </div>
+</div>
+
+<!-- Product quick view modal -->
+<div id="productModal" class="product-modal-overlay" style="display: none;">
+    <div class="product-modal-content">
+        <button type="button" class="close-modal" aria-label="Close">×</button>
+
+        <div class="modal-grid">
+            <!-- Левая часть: картинка -->
+            <div class="modal-gallery">
+                <img id="modalMainImg" src="" alt="Product" class="main-preview-img">
+            </div>
+
+            <!-- Правая часть: информация -->
+            <div class="modal-info">
+                <div id="modalBrand" class="modal-brand"></div>
+                <h2 id="modalTitle" class="modal-title"></h2>
+                <div id="modalPrice" class="modal-price"></div>
+
+                <!-- Краткое описание -->
+                <p id="modalDesc" class="modal-desc"></p>
+
+                <!-- Секция Description -->
+                <div class="modal-section">
+                    <div class="modal-section-header">
+                        <h3>Description</h3>
+                        <span class="accordion-icon">—</span>
+                    </div>
+                    <div class="modal-accordion-content">
+                        <ul id="modalFeatures" class="modal-features"></ul>
+                    </div>
+                </div>
+
+                <!-- Секция Additional information -->
+                <div class="modal-section">
+                    <div class="modal-section-header">
+                        <h3>Additional information</h3>
+                        <span class="accordion-icon">—</span>
+                    </div>
+                    <div class="modal-accordion-content">
+                        <table class="modal-info-table">
+                            <tbody id="modalInfoTable"></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Кнопка покупки -->
+                <a id="modalBuyBtn" href="#" target="_blank" rel="noopener noreferrer" class="modal-buy-btn">
+                    Buy now
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="site-footer mt-lg-5">
+    <div class="container py-4 px-sm-2 px-lg-4">
+        <div class="row gy-3 align-items-center">
+            <div class="col-lg-6">
+                <p class="footer-title mb-1">BASKETBALL-NBA</p>
+                <p class="footer-note mb-0">Players, teams, history, schedules and the game we love.</p>
+            </div>
+            <div class="col-lg-6">
+                <div class="d-flex flex-wrap justify-content-lg-end gap-2">
+                    <span class="member rounded px-2 py-1">Abdulla Nurdaulet</span>
+                    <span class="member rounded px-2 py-1">Angsar Baibossinov</span>
+                    <span class="member rounded px-2 py-1">Yernur Inkarbek</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/store-popup.js"></script>
+<script src="js/store-products.js"></script>
+
+<script src="js/store-modal.js"></script>
+
+</body>
+</html>

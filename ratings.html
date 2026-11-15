@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA Fan Club - Ratings</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bababoi.css">
+    <link rel="stylesheet" href="site-theme.css">
+    <style>
+        .player-card {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black;">
+        <div class="container-fluid px-3 px-sm-2 px-lg-4">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <img src="pictures/logo.png" alt="Basketball-NBA logo" height="34">
+                <span style="color: white;">BASKETBALL-NBA</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNavigation"
+                aria-controls="siteNavigation" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="siteNavigation">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="History.html">History</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="ratings.html">Rating</a></li>
+                    <li class="nav-item"><a class="nav-link" href="schedule.html">Schedule</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Brands.html">Teams</a></li>
+                    <li class="nav-item"><a class="nav-link" href="BrandPrice.html">Store</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Profile.html">Profile</a><li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container py-3 d-flex justify-content-end">
+        <button id="themeToggle"
+                class="btn btn-dark"
+                type="button">
+            🌙 Night Mode
+        </button>
+    </div>
+
+    <main class="container my-4">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-4 gap-3">
+            <h1>Ranking of the Best NBA Players</h1>
+        </div>
+
+        <section class="players-grid">
+
+            <article class="player-card" data-player="shai">
+                <span class="player-rank">#1</span>
+                <img src="images/shai.jpg" alt="Shai Gilgeous-Alexander" class="player-img round-avatar">
+                <h2 style="text-align:center; font-size: 1.2rem;">Shai Gilgeous-Alexander</h2>
+                <p class="team-info">Oklahoma City Thunder | #2 | Guard</p>
+
+                <div class="stats-box">
+                    <h3>Season Statistics</h3>
+                    <ul>
+                        <li><strong>PPG:</strong> 31.1</li>
+                        <li><strong>RPG:</strong> 4.3</li>
+                        <li><strong>APG:</strong> 6.6</li>
+                    </ul>
+                </div>
+
+                <div class="bio-box">
+                    <h3>Info</h3>
+                    <ul>
+                        <li><strong>Height/Weight:</strong> 1.98m / 88kg</li>
+                        <li><strong>Country:</strong> Canada</li>
+                        <li><strong>Age:</strong> 28 years</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="player-card" data-player="edwards">
+                <span class="player-rank">#2</span>
+                <img src="images/edwards.jpg" alt="Anthony Edwards" class="player-img">
+                <h2 style="text-align:center; font-size: 1.2rem;">Anthony Edwards</h2>
+                <p class="team-info">Minnesota Timberwolves | #5 | Guard</p>
+
+                <div class="stats-box">
+                    <h3>Season Statistics</h3>
+                    <ul>
+                        <li><strong>PPG:</strong> 28.8</li>
+                        <li><strong>RPG:</strong> 5.0</li>
+                        <li><strong>APG:</strong> 3.7</li>
+                    </ul>
+                </div>
+
+                <div class="bio-box">
+                    <h3>Info</h3>
+                    <ul>
+                        <li><strong>Height/Weight:</strong> 1.93m / 102kg</li>
+                        <li><strong>Country:</strong> USA</li>
+                        <li><strong>Age:</strong> 25 years</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="player-card" data-player="jokic">
+                <span class="player-rank">#3</span>
+                <img src="images/jokic.jpg" alt="Nikola Jokić" class="player-img">
+                <h2 style="text-align:center; font-size: 1.2rem;">Nikola Jokić</h2>
+                <p class="team-info">Denver Nuggets | #15 | Center</p>
+
+                <div class="stats-box">
+                    <h3>Season Statistics</h3>
+                    <ul>
+                        <li><strong>PPG:</strong> 27.7</li>
+                        <li><strong>RPG:</strong> 12.9</li>
+                        <li><strong>APG:</strong> 10.7</li>
+                    </ul>
+                </div>
+
+                <div class="bio-box">
+                    <h3>Info</h3>
+                    <ul>
+                        <li><strong>Height/Weight:</strong> 2.11m / 129kg</li>
+                        <li><strong>Country:</strong> Serbia</li>
+                        <li><strong>Age:</strong> 31 years</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="player-card" data-player="doncic">
+                <span class="player-rank">#4</span>
+                <img src="images/doncic.jpg" alt="Luka Dončić" class="player-img">
+                <h2 style="text-align:center; font-size: 1.2rem;">Luka Dončić</h2>
+                <p class="team-info">LA Lakers | #77 | Guard</p>
+
+                <div class="stats-box">
+                    <h3>Season Statistics</h3>
+                    <ul>
+                        <li><strong>PPG:</strong> 33.5</li>
+                        <li><strong>RPG:</strong> 7.7</li>
+                        <li><strong>APG:</strong> 8.3</li>
+                    </ul>
+                </div>
+
+                <div class="bio-box">
+                    <h3>Info</h3>
+                    <ul>
+                        <li><strong>Height/Weight:</strong> 2.03m / 104kg</li>
+                        <li><strong>Country:</strong> Slovenia</li>
+                        <li><strong>Age:</strong> 27 years</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="player-card" data-player="brunson">
+                <span class="player-rank">#5</span>
+                <img src="images/brunson.jpg" alt="Jalen Brunson" class="player-img">
+                <h2 style="text-align:center; font-size: 1.2rem;">Jalen Brunson</h2>
+                <p class="team-info">New York Knicks | #11 | Guard</p>
+
+                <div class="stats-box">
+                    <h3>Season Statistics</h3>
+                    <ul>
+                        <li><strong>PPG:</strong> 26.0</li>
+                        <li><strong>RPG:</strong> 3.3</li>
+                        <li><strong>APG:</strong> 6.8</li>
+                    </ul>
+                </div>
+
+                <div class="bio-box">
+                    <h3>Info</h3>
+                    <ul>
+                        <li><strong>Height/Weight:</strong> 1.88m / 86kg</li>
+                        <li><strong>Country:</strong> USA</li>
+                        <li><strong>Age:</strong> 30 years</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="player-card" data-player="wembanyama">
+                <span class="player-rank">#6</span>
+                <img src="images/wembanyama.jpg" alt="Victor Wembanyama" class="player-img">
+                <h2 style="text-align:center; font-size: 1.2rem;">Victor Wembanyama</h2>
+                <p class="team-info">San Antonio Spurs | #1 | Center</p>
+
+                <div class="stats-box">
+                    <h3>Season Statistics</h3>
+                    <ul>
+                        <li><strong>PPG:</strong> 24.3</li>
+                        <li><strong>RPG:</strong> 11.0</li>
+                        <li><strong>APG:</strong> 3.7</li>
+                    </ul>
+                </div>
+
+                <div class="bio-box">
+                    <h3>Info</h3>
+                    <ul>
+                        <li><strong>Height/Weight:</strong> 2.24m / 107kg</li>
+                        <li><strong>Country:</strong> France</li>
+                        <li><strong>Age:</strong> 22 years</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="player-card" data-player="giannis">
+                <span class="player-rank">#7</span>
+                <img src="images/giannis.jpg" alt="Giannis Antetokounmpo" class="player-img">
+                <h2 style="text-align:center; font-size: 1.2rem;">Giannis Antetokounmpo</h2>
+                <p class="team-info">Miami Heat | #34 | Forward</p>
+
+                <div class="stats-box">
+                    <h3>Season Statistics</h3>
+                    <ul>
+                        <li><strong>PPG:</strong> 30.4</li>
+                        <li><strong>RPG:</strong> 11.9</li>
+                        <li><strong>APG:</strong> 6.5</li>
+                    </ul>
+                </div>
+
+                <div class="bio-box">
+                    <h3>Info</h3>
+                    <ul>
+                        <li><strong>Height/Weight:</strong> 2.11m / 110kg</li>
+                        <li><strong>Country:</strong> Greece</li>
+                        <li><strong>Age:</strong> 31 years</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="player-card" data-player="cade">
+                <span class="player-rank">#8</span>
+                <img src="images/cade.jpg" alt="Cade Cunningham" class="player-img">
+                <h2 style="text-align:center; font-size: 1.2rem;">Cade Cunningham</h2>
+                <p class="team-info">Detroit Pistons | #2 | Guard</p>
+
+                <div class="stats-box">
+                    <h3>Season Statistics</h3>
+                    <ul>
+                        <li><strong>PPG:</strong> 26.1</li>
+                        <li><strong>RPG:</strong> 6.1</li>
+                        <li><strong>APG:</strong> 9.1</li>
+                    </ul>
+                </div>
+
+                <div class="bio-box">
+                    <h3>Info</h3>
+                    <ul>
+                        <li><strong>Height/Weight:</strong> 1.98m / 100kg</li>
+                        <li><strong>Country:</strong> USA</li>
+                        <li><strong>Age:</strong> 25 years</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="player-card" data-player="lebron">
+                <span class="player-rank">#9</span>
+                <img src="images/lebron.jpg" alt="LeBron James" class="player-img">
+                <h2 style="text-align:center; font-size: 1.2rem;">LeBron James</h2>
+                <p class="team-info">Philadelphia 76ers | #23 | Forward</p>
+
+                <div class="stats-box">
+                    <h3>Season Statistics</h3>
+                    <ul>
+                        <li><strong>PPG:</strong> 24.4</li>
+                        <li><strong>RPG:</strong> 7.8</li>
+                        <li><strong>APG:</strong> 8.2</li>
+                    </ul>
+                </div>
+
+                <div class="bio-box">
+                    <h3>Info</h3>
+                    <ul>
+                        <li><strong>Height/Weight:</strong> 2.06m / 113kg</li>
+                        <li><strong>Country:</strong> USA</li>
+                        <li><strong>Age:</strong> 41 years</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="player-card" data-player="curry">
+                <span class="player-rank">#10</span>
+                <img src="images/curry.jpg" alt="Stephen Curry" class="player-img">
+                <h2 style="text-align:center; font-size: 1.2rem;">Stephen Curry</h2>
+                <p class="team-info">Golden State Warriors | #30 | Guard</p>
+
+                <div class="stats-box">
+                    <h3>Season Statistics</h3>
+                    <ul>
+                        <li><strong>PPG:</strong> 23.4</li>
+                        <li><strong>RPG:</strong> 4.5</li>
+                        <li><strong>APG:</strong> 6.1</li>
+                    </ul>
+                </div>
+
+                <div class="bio-box">
+                    <h3>Info</h3>
+                    <ul>
+                        <li><strong>Height/Weight:</strong> 1.88m / 84kg</li>
+                        <li><strong>Country:</strong> USA</li>
+                        <li><strong>Age:</strong> 38 years</li>
+                    </ul>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <footer class="site-footer mt-lg-5">
+        <div class="container py-4 px-sm-2 px-lg-4">
+            <div class="row gy-3 align-items-center">
+                <div class="col-lg-6">
+                    <p class="footer-title mb-1">BASKETBALL-NBA</p>
+                    <p class="footer-note mb-0">Players, teams, history, schedules and the game we love.</p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="d-flex flex-wrap justify-content-lg-end gap-2">
+                        <span class="member rounded px-2 py-1">Abdulla Nurdaulet</span>
+                        <span class="member rounded px-2 py-1">Angsar Baibossinov</span>
+                        <span class="member rounded px-2 py-1">Yernur Inkarbek</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="player-modal"
+        style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); z-index:1000; justify-content:center; align-items:center;">
+        <div
+            style="background:white; padding:30px; border-radius:12px; max-width:500px; width:90%; position:relative; box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
+            <button id="close-modal-btn"
+                style="position:absolute; top:15px; right:15px; border:none; background:none; font-size:24px; cursor:pointer;">×</button>
+            <div id="modal-text"></div>
+        </div>
+    </div>
+
+    <script src="js/rating.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

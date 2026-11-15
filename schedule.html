@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA Fan Club - Schedule</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bababoi.css">
+    <link rel="stylesheet" href="site-theme.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black;">
+        <div class="container-fluid px-3 px-sm-2 px-lg-4">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <img src="pictures/logo.png" alt="Basketball-NBA logo" height="34">
+                <span style="color: white;">BASKETBALL-NBA</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNavigation"
+                aria-controls="siteNavigation" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="siteNavigation">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="History.html">History</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ratings.html">Rating</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="schedule.html">Schedule</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Brands.html">Teams</a></li>
+                    <li class="nav-item"><a class="nav-link" href="BrandPrice.html">Store</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Profile.html">Profile</a>
+                    </li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-3 d-flex justify-content-end">
+        <button id="themeToggle" class="btn btn-dark" type="button">
+            🌙 Night Mode
+        </button>
+    </div>
+
+    <main class="container my-4">
+        <div class="row mb-4 align-items-center justify-content-between g-3">
+            <div class="col-12 col-md-4">
+            </div>
+            <div class="col-12 col-md-4 text-md-center">
+            </div>
+            <div class="col-12 col-md-4 text-md-end">
+                <button id="open-popup-btn" class="btn btn-warning fw-bold btn-sm">📩 Quick Subscribe Form</button>
+            </div>
+        </div>
+
+        <section class="mb-5"></section>
+        <div class="accordion-container mt-3">
+            <div class="accordion-header">How can I pre-order tickets for upcoming games?</div>
+            <div class="accordion-content">
+                <p>You can use our Ticket Pre-order form at the bottom of this page. Select your favorite team and
+                    preferred section, and we will contact you via email!</p>
+            </div>
+
+            <div class="accordion-header">When are match dates updated?</div>
+            <div class="accordion-content">
+                <p>The schedule is updated weekly in real-time according to official NBA announcements.</p>
+            </div>
+
+            <div class="accordion-header">Can I choose my seating area?</div>
+            <div class="accordion-content">
+                <p>Yes! We offer options for both Lower bowl and Upper bowl seating in our ticket booking form.</p>
+            </div>
+        </div>
+        </section>
+
+        <section class="table-section">
+            <div class="d-flex justify-content-between align-items-center flex-wrap mb-3">
+                <h1>Schedule of Upcoming Matches</h1>
+                <div class="d-flex gap-2 flex-wrap">
+                    <button class="filter-btn btn btn-outline-primary btn-sm" data-filter="all">All Teams</button>
+                    <button class="filter-btn btn btn-outline-secondary btn-sm" data-filter="Celtics">Celtics</button>
+                    <button class="filter-btn btn btn-outline-secondary btn-sm" data-filter="Lakers">Lakers</button>
+                    <button class="filter-btn btn btn-outline-secondary btn-sm" data-filter="Pistons">Pistons</button>
+                    <button class="filter-btn btn btn-outline-secondary btn-sm" data-filter="Knicks">Knicks</button>
+                </div>
+            </div>
+
+            <div class="table-responsive">
+                <table id="schedule-table" class="table">
+                    <thead>
+                        <tr>
+                            <th>Poster</th>
+                            <th>Date and Time</th>
+                            <th>Home Team</th>
+                            <th>Visiting Team</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="match-thumb-cell">
+                                <div class="table-thumb">
+                                    <img src="images/bos vs pis.jpg" alt="Pistons vs Celtics">
+                                    <div class="thumb-overlay">Match 1</div>
+                                </div>
+                            </td>
+                            <td>21.10 | 00:00</td>
+                            <td>Pistons</td>
+                            <td>Celtics</td>
+                            <td>Upcoming</td>
+                        </tr>
+                        <tr>
+                            <td class="match-thumb-cell">
+                                <div class="table-thumb">
+                                    <img src="images/76ers-vs-knicks.jpg.jpeg" alt="Knicks vs 76ers">
+                                    <div class="thumb-overlay">Match 2</div>
+                                </div>
+                            </td>
+                            <td>21.10 | 04:00</td>
+                            <td>Knicks</td>
+                            <td>76ers</td>
+                            <td>Upcoming</td>
+                        </tr>
+                        <tr>
+                            <td class="match-thumb-cell">
+                                <div class="table-thumb">
+                                    <img src="images/spurs-vs-thunder.jpeg" alt="Spurs vs Thunder">
+                                    <div class="thumb-overlay">Match 3</div>
+                                </div>
+                            </td>
+                            <td>21.10 | 06:30</td>
+                            <td>Spurs</td>
+                            <td>Thunder</td>
+                            <td>Upcoming</td>
+                        </tr>
+                        <tr>
+                            <td class="match-thumb-cell">
+                                <div class="table-thumb">
+                                    <img src="images/wizards-vs-bucks.jpg" alt="Wizards vs Bucks">
+                                    <div class="thumb-overlay">Match 4</div>
+                                </div>
+                            </td>
+                            <td>22.10 | 04:00</td>
+                            <td>Wizards</td>
+                            <td>Bucks</td>
+                            <td>Upcoming</td>
+                        </tr>
+                        <tr>
+                            <td class="match-thumb-cell">
+                                <div class="table-thumb">
+                                    <img src="images/Orlando-Magic-vs-Atlanta-Hawks.jpg" alt="Magic vs Hawks">
+                                    <div class="thumb-overlay">Match 5</div>
+                                </div>
+                            </td>
+                            <td>22.10 | 04:00</td>
+                            <td>Magic</td>
+                            <td>Hawks</td>
+                            <td>Upcoming</td>
+                        </tr>
+                        <tr>
+                            <td class="match-thumb-cell">
+                                <div class="table-thumb">
+                                    <img src="images/heat-vs-timberwolws.jpg" alt="Heat vs Timberwolves">
+                                    <div class="thumb-overlay">Match 6</div>
+                                </div>
+                            </td>
+                            <td>22.10 | 04:30</td>
+                            <td>Heat</td>
+                            <td>Timberwolves</td>
+                            <td>Upcoming</td>
+                        </tr>
+                        <tr>
+                            <td class="match-thumb-cell">
+                                <div class="table-thumb">
+                                    <img src="images/nets-vs-hornets.jpg" alt="Nets vs Hornets">
+                                    <div class="thumb-overlay">Match 7</div>
+                                </div>
+                            </td>
+                            <td>22.10 | 04:30</td>
+                            <td>Nets</td>
+                            <td>Hornets</td>
+                            <td>Upcoming</td>
+                        </tr>
+                        <tr>
+                            <td class="match-thumb-cell">
+                                <div class="table-thumb">
+                                    <img src="images/raptors-vs-bulls.jpg" alt="Raptors vs Bulls">
+                                    <div class="thumb-overlay">Match 8</div>
+                                </div>
+                            </td>
+                            <td>22.10 | 04:30</td>
+                            <td>Raptors</td>
+                            <td>Bulls</td>
+                            <td>Upcoming</td>
+                        </tr>
+                        <tr>
+                            <td class="match-thumb-cell">
+                                <div class="table-thumb">
+                                    <img src="images/pelicans-vs-pacers.jpg" alt="Pelicans vs Pacers">
+                                    <div class="thumb-overlay">Match 9</div>
+                                </div>
+                            </td>
+                            <td>22.10 | 05:00</td>
+                            <td>Pelicans</td>
+                            <td>Pacers</td>
+                            <td>Upcoming</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="form-section mt-5 p-4 p-md-5 bg-white rounded shadow-sm">
+            <h2>Ticket Pre-order & Notifications</h2>
+            <form id="ticket-form" class="row g-3" novalidate>
+                <div class="col-12 col-md-6">
+                    <label for="name" class="form-label">Your Name:</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+                    <div class="error-msg" id="name-error">Please enter your full name.</div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <label for="email" class="form-label">Your Email:</label>
+                    <div class="input-group">
+                        <span class="input-group-text">@</span>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="example@mail.com">
+                    </div>
+                    <div class="error-msg" id="email-error">Please enter a valid email address.</div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <label for="team" class="form-label">Favorite team:</label>
+                    <select id="team" name="team" class="form-select">
+                        <option value="okc">OKC Thunder</option>
+                        <option value="wolves">Minnesota Timberwolves</option>
+                        <option value="nuggets">Denver Nuggets</option>
+                        <option value="lakers">LA Lakers</option>
+                        <option value="knicks">New York Knicks</option>
+                    </select>
+                </div>
+                <div class="col-12 col-md-6">
+                    <label for="ticket-quantity" class="form-label">Number of tickets:</label>
+                    <input type="number" class="form-control" id="ticket-quantity" name="ticketQuantity" min="1"
+                        max="10" step="1" placeholder="Enter number of tickets">
+                    <div class="error-msg" id="quantity-error">Please enter a number from 1 to 10.</div>
+                </div>
+                <fieldset class="col-12 col-md-6 border-0">
+                    <legend class="form-label fs-6">Preferred section</legend>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="section" id="lower-bowl" value="lower"
+                            checked>
+                        <label class="form-check-label" for="lower-bowl">Lower bowl</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="section" id="upper-bowl" value="upper">
+                        <label class="form-check-label" for="upper-bowl">Upper bowl</label>
+                    </div>
+                </fieldset>
+                <div class="col-12 col-md-6">
+                    <label for="color" class="form-label">Choose gear color:</label>
+                    <input type="color" class="form-control form-control-color" id="color" name="color" value="#eb7404"
+                        title="Choose your gear color">
+                </div>
+                <div class="col-12">
+                    <label for="message" class="form-label">Additional notes:</label>
+                    <textarea id="message" name="message" class="form-control" rows="3"
+                        placeholder="Specify section or seats..."></textarea>
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="submit-btn">Submit Request</button>
+                </div>
+
+                <div class="col-12">
+                    <div id="ticket-success" class="alert alert-success d-none" role="alert">
+                        Your ticket request has been submitted successfully!
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <div id="popup-container" class="popup-overlay">
+        <div class="popup-window">
+            <button id="close-popup-btn" class="popup-close">×</button>
+            <h3 class="mb-2 text-start">NBA Newsletter</h3>
+            <p class="text-muted fs-6 mb-3">Get instant notification alerts for top NBA games.</p>
+            <form id="popup-form">
+                <div class="mb-3">
+                    <input type="email" class="form-control" id="popup-email" placeholder="Enter your email" required>
+                </div>
+                <button type="submit" class="submit-btn">Subscribe Now</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="site-footer mt-lg-5">
+        <div class="container py-4 px-sm-2 px-lg-4">
+            <div class="row gy-3 align-items-center">
+                <div class="col-lg-6">
+                    <p class="footer-title mb-1">BASKETBALL-NBA</p>
+                    <p class="footer-note mb-0">Players, teams, history, schedules and the game we love.</p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="d-flex flex-wrap justify-content-lg-end gap-2">
+                        <span class="member rounded px-2 py-1">Abdulla Nurdaulet</span>
+                        <span class="member rounded px-2 py-1">Angsar Baibossinov</span>
+                        <span class="member rounded px-2 py-1">Yernur Inkarbek</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/schedule.js"></script>
+</body>
+
+</html>
